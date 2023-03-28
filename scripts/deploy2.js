@@ -12,9 +12,10 @@ async function main() {
   const value1 = "singa";
   const value2 = "domba";
   const value3 = 2;
+  const value4 = "0x82555Cc48a532Fa4e2194aB883eB6d465149F80E";
 
 //  Panggil contract dengan fungsi deploy dengan parameter
-  const arguments = await Arguments.deploy(value1, value2, value3);
+  const arguments = await Arguments.deploy(value1, value2, value3, value4);
   await arguments.deployed();
 
   console.log("contract deployed to:", arguments.address);
