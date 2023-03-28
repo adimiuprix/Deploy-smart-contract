@@ -20,11 +20,20 @@ module.exports = {
   /** Choose network do you want for deploy */
   networks: {
     hardhat: {},
-
     mumbai: {
       url: "https://matic-mumbai.chainstacklabs.com",
       accounts: [`0x${PRIVATE_KEY}`]
-    }
+    },
+    sepolia: {
+      url: "https://rpc.sepolia.org",
+      accounts: [`0x${PRIVATE_KEY}`],
+    },
+  },
+
+  /** Path untuk artifacts and caches (optional: You can also not write this code)*/
+  paths: {
+    cache: "./cache",
+    artifacts: "./artifacts",
   },
 
   /** Etherscan Initial for verifying */
