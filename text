@@ -1,0 +1,6 @@
+Jika hendak deploy smart contract dengan argument, gunakan perintah seperti berikut.
+Arguments berupa string perlu menambahkan tanda ("..."), jika berupa interger jangan gunakan tanda kutip.
+untuk verify, pastikan arguments yang diberika cocok dan urut sesuai yang ada pada deploy2.js
+
+npx hardhat run scripts/deploy2.js --network sepolia
+npx hardhat verify --network sepolia 0x4B8a0A0a62B3b342fC5a7B082E34672Ba40634f5 "singa" "domba" 2
