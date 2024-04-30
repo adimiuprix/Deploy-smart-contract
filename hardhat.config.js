@@ -2,7 +2,7 @@
 
 require('dotenv').config(); /** require dotenv, install first */
 require("@nomiclabs/hardhat-ethers"); /** Install this dependecy */
-require("@nomiclabs/hardhat-etherscan"); /** Also install this */
+require("@nomicfoundation/hardhat-verify"); /** Also install this */
 const {  PRIVATE_KEY, API_KEY } = process.env; /** Call the variables from environment setup */
 
 /** Export modul, you can also dissmiss "settings" (Optional) */
