@@ -9,15 +9,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "dotenv": "^16.4.5"
-  },
-  "dependencies": {
+    "@nomicfoundation/hardhat-ignition": "^0.15.3",
+    "@nomicfoundation/hardhat-ignition-ethers": "^0.15.3",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@nomicfoundation/hardhat-verify": "^2.0.6",
-    "@nomiclabs/hardhat-ethers": "^2.2.3",
-    "@openzeppelin/contracts": "^5.0.2",
     "hardhat": "^2.22.3"
   },
-  "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0"
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5"
   }
 }
