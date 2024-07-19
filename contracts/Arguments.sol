@@ -1,21 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 contract Arguments {
-    string public binatang1;
-    string public binatang2;
-    uint256 public nilai;
-    address public wallet;
+    string public word1;
+    string public word2;
 
-    constructor(
-        string memory semut,
-        string memory kelinci,
-        uint256 angka,
-        address alamatETH
-    ) {
-        binatang1 = semut;
-        binatang2 = kelinci;
-        nilai = angka;
-        wallet = alamatETH;
+    constructor(string memory _word1, string memory _word2) {
+        word1 = _word1;
+        word2 = _word2;
     }
 }
