@@ -27,4 +27,5 @@ npx hardhat run scripts/deploy2.js --network sepolia
 npx hardhat verify --network sepolia 0xCA74c9Ef081842050Ec37fFa910014E0184158be "singa" "domba" 2 "0x82555Cc48a532Fa4e2194aB883eB6d465149F80E"
 
 ```shell
-npx hardhat ignition deploy ignition/modules/Token.js --network amoy
+npx hardhat ignition deploy ignition/modules/Token.js --network sepolia --verify
+npx hardhat ignition verify chain-11155111

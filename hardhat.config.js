@@ -2,11 +2,6 @@ require("@nomicfoundation/hardhat-toolbox")
 require("hardhat-gas-reporter")
 require('dotenv').config()
 
-const POLYGON_API_KEY = process.env.POLYGON_API_KEY
-const HYBRID = process.env.HYBRID
-const ZKCARDONA_TESTNET = process.env.ZKCARDONA_TESTNET
-const AMOY_POLYGON = process.env.AMOY_POLYGON
-
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY
 /** @type import('hardhat/config').HardhatUserConfig */
 
@@ -21,31 +16,35 @@ module.exports = {
   },
 
   networks: {
+    sepolia: {
+      url: process.env.SEPOLIA_ETH,
+      accounts: [process.env.PRIVATE_KEY],
+    },
     hybrid: {
-      url: HYBRID,
+      url: process.env.HYBRID,
       accounts: [process.env.PRIVATE_KEY],
     },
     cardona: {
-      url: ZKCARDONA_TESTNET,
+      url: process.env.ZKCARDONA_TESTNET,
       accounts: [process.env.PRIVATE_KEY],
     },
     amoy: {
-      url: AMOY_POLYGON,
+      url: process.env.AMOY_POLYGON,
       accounts: [process.env.PRIVATE_KEY],
     },
   },
 
   etherscan: {
-    apiKey: [process.env.PRIVATE_KEY],
+    apiKey: process.env.PRIVATE_KEY,
 
     customChains: [
       {
-        network: 'amoy',
-        chainId: 80002,
+        network: 'sepolia',
+        chainId: 11155111,
         urls: {
-          apiKey: POLYGON_API_KEY,
-          apiURL: 'https://api-amoy.polygonscan.com/api',
-          browserURL: 'https://amoy.polygonscan.com/',
+          apiKey: process.env.ETHEREUM_API_KEY,
+          apiURL: 'https://api-sepolia.etherscan.io/api',
+          browserURL: 'https://sepolia.etherscan.io',
         },
       },
     ],
