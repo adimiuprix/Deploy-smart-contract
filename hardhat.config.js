@@ -1,4 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox")
+require("@nomicfoundation/hardhat-verify");
 require("hardhat-gas-reporter")
 require('dotenv').config()
 
@@ -35,20 +36,9 @@ module.exports = {
   },
 
   etherscan: {
-    apiKey: process.env.PRIVATE_KEY,
-
-    customChains: [
-      {
-        network: 'sepolia',
-        chainId: 11155111,
-        urls: {
-          apiKey: process.env.ETHEREUM_API_KEY,
-          apiURL: 'https://api-sepolia.etherscan.io/api',
-          browserURL: 'https://sepolia.etherscan.io',
-        },
-      },
-    ],
-
+    apiKey: {
+      sepolia: process.env.ETHEREUM_API_KEY,
+    }
   },
 
   paths: {
