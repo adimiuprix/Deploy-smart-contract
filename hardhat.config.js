@@ -13,7 +13,8 @@ module.exports = {
     optimizer: {
       enabled: true,
       runs: 200
-    }
+    },
+    evmVersion: `cancun`,
   },
 
   networks: {
@@ -33,12 +34,26 @@ module.exports = {
       url: process.env.AMOY_POLYGON,
       accounts: [process.env.PRIVATE_KEY],
     },
+    vanguard: {
+      url: process.env.VANGUARD,
+      accounts: [process.env.PRIVATE_KEY],
+    },
   },
 
   etherscan: {
     apiKey: {
       sepolia: process.env.ETHEREUM_API_KEY,
-    }
+    },
+    customChains: [
+      {
+        network: "vanguard",
+        chainId: 78600,
+        urls: {
+          apiURL: "https://explorer-vanguard.vanarchain.com/api/v2",
+          browserURL: "https://zentrace.io"
+        }
+      }
+    ]
   },
 
   paths: {
